@@ -3,15 +3,15 @@ using SilentGuardian.Domain.Checks;
 
 namespace SilentGuardian.xUnitTests;
 
-public class UnitTest1
+public class CheckMethodsUnitTests
 {
     [Theory]
-    [InlineData("192.168.1.1", 29070, null)]
-    [InlineData("192.168.1.1.58", 29070, typeof(ArgumentException))]
-    [InlineData("192.168.1.1", 66565, typeof(ArgumentOutOfRangeException))]
-    public void TcpPortCreation(string ip, int port, Type? expectedException)
+    [InlineData("192.168.1.1", 29070, 200, null)]
+    [InlineData("192.168.1.1.58", 29070, 200, typeof(ArgumentException))]
+    [InlineData("192.168.1.1", 66565, 200, typeof(ArgumentOutOfRangeException))]
+    public void TcpPortCreation(string ip, int port,int timeout, Type? expectedException)
     {
-        Action act = () => TcpPortCheck.Create(ip, port);
+        Action act = () => TcpPortCheck.Create(ip, port,timeout);
         
         if (expectedException == null)
         {

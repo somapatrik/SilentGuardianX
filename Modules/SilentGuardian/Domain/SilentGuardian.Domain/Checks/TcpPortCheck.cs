@@ -1,4 +1,5 @@
 using System.Net;
+using System.Net.Sockets;
 
 namespace SilentGuardian.Domain.Checks;
 
@@ -7,12 +8,12 @@ public class TcpPortCheck : CheckMethod
     public string IP { get; private set; }
     public int Port { get; private set; }
 
-    public static TcpPortCheck Create(string ip, int port)
+    public static TcpPortCheck Create(string ip, int port, int timeout = 2000)
     {
         TcpPortCheck check = new TcpPortCheck();
         check.SetIP(ip);
         check.SetPort(port);
-
+        check.SetTimeout(timeout);
         return check;
     }
 
@@ -32,8 +33,26 @@ public class TcpPortCheck : CheckMethod
         IP = ip;
     }
 
-    public override Task CheckAsync()
+    public override async Task<bool> RunAsync()
     {
-        return Task.CompletedTask;
+        bool result = false;
+        try
+        {
+            using var client = new TcpClient();
+            var connectTask = client.ConnectAsync(IP, Port);
+            var timeoutTask = Task.Delay(Timeout);
+
+            var completed = await Task.WhenAny(connectTask, timeoutTask);
+            result = completed == connectTask && client.Connected;
+        }
+        catch
+        {
+            result = false;
+        }
+        finally
+        {
+            SetLastResult(result);
+        }
+        return result;
     }
 }

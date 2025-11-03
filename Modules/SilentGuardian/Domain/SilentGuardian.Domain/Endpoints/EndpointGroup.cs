@@ -6,7 +6,7 @@ public class EndpointGroup
     public string GroupName { get; private set; }
     public string? Description { get; private set; }
     public bool IsEnabled { get; private set; }
-    public List<Endpoint>? Endpoints { get; private set; }
+    public List<Endpoint> Endpoints { get; private set; } = new List<Endpoint>();
     public bool Result { get;  private set; }   
 
     public static EndpointGroup Create(string groupName, string? description = null)
@@ -14,28 +14,32 @@ public class EndpointGroup
         var group = new EndpointGroup();
         
         group.Id = Guid.NewGuid();
-        group.GroupName = groupName;
+        group.SetName(groupName);
         group.Description = description;
         
         return group;
     }
 
+    private void SetName(string groupName)
+    {
+        if (string.IsNullOrWhiteSpace(groupName))
+            throw new ArgumentNullException(nameof(groupName));
+        
+        if (groupName.Length > 50)
+            throw new ArgumentOutOfRangeException(nameof(groupName));
+        
+        GroupName = groupName.Trim();
+    }
+    
     public void AddEndpoint(Endpoint endpoint)
     {
-        if (Endpoints == null)
-            Endpoints = new List<Endpoint>();
-        
         if (!Endpoints.Contains(endpoint))
             Endpoints.Add(endpoint);
     }
 
     public void RemoveEndpoint(Endpoint endpoint)
     {
-        if (Endpoints == null)
-            return;
-        
-        if (Endpoints.Contains(endpoint))
-            Endpoints.Remove(endpoint);
+        Endpoints.Remove(endpoint);
     }
 
 }
