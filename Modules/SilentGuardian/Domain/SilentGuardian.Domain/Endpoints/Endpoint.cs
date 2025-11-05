@@ -10,7 +10,6 @@ public class Endpoint
     public bool IsEnabled { get; private set; }
     public EndpointResult Result { get; private set; }
     public List<CheckMethod> CheckMethods { get; private set; } = new List<CheckMethod>();
-    
     public int Timeout { get; private set; }
     
     public static Endpoint Create(string name, string? description = null, bool isEnabled = true, int timeout = 1000)
@@ -19,8 +18,8 @@ public class Endpoint
         endpoint.Id = Guid.NewGuid();
         endpoint.SetName(name);
         endpoint.SetTimeout(timeout);
+        endpoint.IsEnabled = isEnabled;
         endpoint.Description = description;
-        
         return endpoint;
     }
 
@@ -34,11 +33,10 @@ public class Endpoint
     {
         if (CheckMethods.Contains(checkMethod)) return;
         
-        if (checkMethod.Timeout > Timeout)
-        {
-            checkMethod.SetTimeout(Timeout);
-            CheckMethods.Add(checkMethod);
-        }
+        if (checkMethod.TimeoutLimit > Timeout)
+            checkMethod.SetTimeoutLimit(Timeout);
+        
+        CheckMethods.Add(checkMethod);
     }
 
     public void RemoveCheckMethod(CheckMethod checkMethod)
@@ -63,13 +61,13 @@ public class Endpoint
         
         Timeout = timeout;
         
-        CheckMethodsTimeout();
+        SetTimeoutLimitForMethods();
     }
     
-    private void CheckMethodsTimeout()
+    private void SetTimeoutLimitForMethods()
     {
         foreach (var checkMethod in CheckMethods)
-            if (checkMethod.Timeout > Timeout)
-                checkMethod.SetTimeout(Timeout);
+            if (checkMethod.TimeoutLimit > Timeout)
+                checkMethod.SetTimeoutLimit(Timeout);
     }
 }

@@ -13,7 +13,6 @@ public class TcpPortCheck : CheckMethod
         TcpPortCheck check = new TcpPortCheck();
         check.SetIP(ip);
         check.SetPort(port);
-        check.SetTimeout(timeout);
         return check;
     }
 

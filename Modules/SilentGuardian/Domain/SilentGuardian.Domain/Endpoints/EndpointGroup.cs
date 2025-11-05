@@ -12,11 +12,9 @@ public class EndpointGroup
     public static EndpointGroup Create(string groupName, string? description = null)
     {
         var group = new EndpointGroup();
-        
         group.Id = Guid.NewGuid();
         group.SetName(groupName);
         group.Description = description;
-        
         return group;
     }
 
