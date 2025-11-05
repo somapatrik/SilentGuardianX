@@ -26,4 +26,8 @@
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.10" />
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Modules\SilentGuardian\Infrastructure\SilentGuardian.Infrastructure\SilentGuardian.Infrastructure.csproj" />
+    </ItemGroup>
 </Project>
