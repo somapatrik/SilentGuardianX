@@ -12,6 +12,10 @@ public class Endpoint
     public List<CheckMethod> CheckMethods { get; private set; } = new List<CheckMethod>();
     public int Timeout { get; private set; }
     
+    // EF
+    public Guid EndpointGroupId  { get; private set; }
+    public EndpointGroup EndpointGroup { get; private set; } = default!;
+    
     public static Endpoint Create(string name, string? description = null, bool isEnabled = true, int timeout = 1000)
     {
         var endpoint = new Endpoint();

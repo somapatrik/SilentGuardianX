@@ -4,6 +4,7 @@ using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 using SilentGuardian.Infrastructure.Extensions;
 using SilentGuardianX.Extensions;
 using SilentGuardianX.ViewModels;
@@ -23,6 +24,12 @@ public partial class App : Application
         // If you use CommunityToolkit, line below is needed to remove Avalonia data validation.
         // Without this line you will get duplicate validations from both Avalonia and CT
         BindingPlugins.DataValidators.RemoveAt(0);
+        
+        var config = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: false)
+            .Build();
+
+        var connectionString = config.GetConnectionString("SilentGuardianDatabase");
 
         // Register all the services needed for the application to run
         var collection = new ServiceCollection();
