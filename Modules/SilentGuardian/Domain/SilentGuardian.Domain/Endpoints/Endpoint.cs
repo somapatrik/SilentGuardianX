@@ -9,12 +9,12 @@ public class Endpoint
     public string? Description { get; private set; }
     public bool IsEnabled { get; private set; }
     public EndpointResult Result { get; private set; }
-    public List<CheckMethod> CheckMethods { get; private set; } = new List<CheckMethod>();
+    public List<CheckMethod> CheckMethods { get; private set; } = default!;
     public int Timeout { get; private set; }
     
     // EF
-    public Guid EndpointGroupId  { get; private set; }
-    public EndpointGroup EndpointGroup { get; private set; } = default!;
+    public Guid? EndpointGroupId  { get; private set; }
+    public EndpointGroup? EndpointGroup { get; private set; }
     
     public static Endpoint Create(string name, string? description = null, bool isEnabled = true, int timeout = 1000)
     {

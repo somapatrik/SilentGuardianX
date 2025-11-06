@@ -34,7 +34,7 @@ public partial class App : Application
         // Register all the services needed for the application to run
         var collection = new ServiceCollection();
         collection.AddCommonServices();
-        collection.AddSilentGuardianInfrastructure("Data Source=:memory:");
+        collection.AddSilentGuardianInfrastructure(connectionString);
 
         // Creates a ServiceProvider containing services from the provided IServiceCollection
         var services = collection.BuildServiceProvider();

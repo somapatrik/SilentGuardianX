@@ -8,6 +8,8 @@ public class EndpointGroupEntityTypeConfiguration : IEntityTypeConfiguration<End
 {
     public void Configure(EntityTypeBuilder<EndpointGroup> builder)
     {
+        builder.ToTable("EndpointGroups");
+        
         builder.HasKey(e => e.Id);
 
         builder.Property(e => e.GroupName)
@@ -27,6 +29,6 @@ public class EndpointGroupEntityTypeConfiguration : IEntityTypeConfiguration<End
         builder.HasMany(e => e.Endpoints)
             .WithOne()
             .HasForeignKey("EndpointGroupId") // shadow FK
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

@@ -11,6 +11,7 @@ public class TcpPortCheck : CheckMethod
     public static TcpPortCheck Create(string ip, int port, int timeout = 2000)
     {
         TcpPortCheck check = new TcpPortCheck();
+        check.Id = Guid.NewGuid();
         check.SetIP(ip);
         check.SetPort(port);
         return check;

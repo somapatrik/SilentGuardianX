@@ -8,6 +8,8 @@ public class EndpointEntityTypeConfiguration : IEntityTypeConfiguration<Endpoint
 {
     public void Configure(EntityTypeBuilder<Endpoint> builder)
     {
+        builder.ToTable("Endpoints");
+        
         builder.HasKey(e => e.Id);
 
         builder.Property(e => e.Name)
@@ -32,11 +34,10 @@ public class EndpointEntityTypeConfiguration : IEntityTypeConfiguration<Endpoint
             .HasForeignKey(e => e.EndpointGroupId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        /*
         // CheckMethods: 1:N vztah (pokud existuje třída CheckMethod)
         builder.HasMany(e => e.CheckMethods)
             .WithOne()
             .HasForeignKey("EndpointId") // shadow FK
-            .OnDelete(DeleteBehavior.Cascade);*/
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
