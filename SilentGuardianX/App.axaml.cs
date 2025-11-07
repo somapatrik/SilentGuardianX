@@ -20,7 +20,6 @@ public partial class App : Application
     {
         AvaloniaXamlLoader.Load(this);
     }
-
     public override void OnFrameworkInitializationCompleted()
     {
         // If you use CommunityToolkit, line below is needed to remove Avalonia data validation.

@@ -14,7 +14,7 @@ public class CreateEndpointGroupCommandHandler : ICommandHandler<CreateEndpointG
 
     public async ValueTask<Unit> Handle(CreateEndpointGroupCommand command, CancellationToken cancellationToken)
     {
-        await _repository.CreateAsync(Domain.Endpoints.EndpointGroup.Create("Test", "dhsfjkhdsf"));
+        await _repository.CreateAsync(Domain.Endpoints.EndpointGroup.Create(command.GroupName,command.Description));
         return Unit.Value;
     }
 }

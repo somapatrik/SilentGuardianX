@@ -13,7 +13,7 @@ public static class ServiceCollectionExtension
         services.AddDbContext<SilentGuardianContext>(options => options.UseSqlite(connectionString));
         services.AddScoped<IEndpointGroupRepository, EndpointGroupRepository>();
         
-        // Po vytvoření ServiceProvideru se databáze automaticky vytvoří
+        // Delete / create database
         using (var serviceProvider = services.BuildServiceProvider())
         {
             using var scope = serviceProvider.CreateScope();
