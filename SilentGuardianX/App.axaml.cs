@@ -3,8 +3,10 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
+using Mediator;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using SilentGuardian.Application.Extensions;
 using SilentGuardian.Infrastructure.Extensions;
 using SilentGuardianX.Extensions;
 using SilentGuardianX.ViewModels;
@@ -24,7 +26,7 @@ public partial class App : Application
         // If you use CommunityToolkit, line below is needed to remove Avalonia data validation.
         // Without this line you will get duplicate validations from both Avalonia and CT
         BindingPlugins.DataValidators.RemoveAt(0);
-        
+
         var config = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json", optional: false)
             .Build();
@@ -35,10 +37,12 @@ public partial class App : Application
         var collection = new ServiceCollection();
         collection.AddCommonServices();
         collection.AddSilentGuardianInfrastructure(connectionString);
+        collection.AddSilentGuardianApplication();
 
         // Creates a ServiceProvider containing services from the provided IServiceCollection
         var services = collection.BuildServiceProvider();
-
+        var mediator = services.GetRequiredService<IMediator>();
+    
         var vm = services.GetRequiredService<MainViewModel>();
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {

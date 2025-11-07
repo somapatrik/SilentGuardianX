@@ -18,6 +18,7 @@ sealed class Program
             .UsePlatformDetect()
             .WithInterFont()
             .LogToTrace();
+            
     
     
 }

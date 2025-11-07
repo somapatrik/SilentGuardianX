@@ -16,6 +16,7 @@ public class EndpointGroupRepository : IEndpointGroupRepository
     public async Task CreateAsync(EndpointGroup endpointGroup)
     {
         await _context.EndpointGroups.AddAsync(endpointGroup);
+        await _context.SaveChangesAsync();
     }
 
     public Task<IEnumerable<EndpointGroup>> GetAsync()

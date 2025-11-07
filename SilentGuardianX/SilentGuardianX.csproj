@@ -30,6 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Modules\SilentGuardian\Application\SilentGuardian.Application\SilentGuardian.Application.csproj" />
       <ProjectReference Include="..\Modules\SilentGuardian\Infrastructure\SilentGuardian.Infrastructure\SilentGuardian.Infrastructure.csproj" />
     </ItemGroup>
 
