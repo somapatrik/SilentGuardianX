@@ -3,19 +3,18 @@
         xmlns:vm="using:SilentGuardianX.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:componets="clr-namespace:SilentGuardianX.Views.Components"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="SilentGuardianX.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
+        x:DataType="vm:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="SilentGuardianX">
-
-    <Design.DataContext>
-        <vm:MainViewModel/>
-    </Design.DataContext>
-
+    
     <Grid 
         ColumnDefinitions="Auto,*,auto"
         RowDefinitions="Auto,*,auto">
+        
+        <componets:MenuView Grid.Row="1" Grid.Column="0"></componets:MenuView>
         
     </Grid>
 

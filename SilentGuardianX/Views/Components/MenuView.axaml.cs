@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace SilentGuardianX.Views.Components;
 
-public partial class MenuItemGroup : UserControl
+public partial class MenuView : UserControl
 {
-    public MenuItemGroup()
+    public MenuView()
     {
         InitializeComponent();
     }

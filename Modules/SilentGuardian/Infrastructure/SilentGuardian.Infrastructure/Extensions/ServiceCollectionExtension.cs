@@ -18,7 +18,7 @@ public static class ServiceCollectionExtension
         {
             using var scope = serviceProvider.CreateScope();
             var db = scope.ServiceProvider.GetRequiredService<SilentGuardianContext>();
-            db.Database.EnsureDeleted();
+            //db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
         }
         
