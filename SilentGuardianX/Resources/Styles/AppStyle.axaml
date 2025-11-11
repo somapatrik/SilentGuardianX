@@ -14,8 +14,8 @@
                     <GradientStop Color="{StaticResource GithubDark}" Offset="1"/>
                 </RadialGradientBrush>-->
                 <LinearGradientBrush StartPoint="50%,100%" EndPoint="50%,0%">
-                    <GradientStop Color="#16222A" Offset="0"/>
-                    <GradientStop Color="#3A6073" Offset="1"/>
+                    <GradientStop Color="#000000" Offset="0"/>
+                    <GradientStop Color="{StaticResource GithubDark}" Offset="2"/>
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
@@ -28,9 +28,9 @@
     
     <Style Selector="Border.TransparentBar">
         <Setter Property="Background" Value="{StaticResource TransparentWhiteBrush}"/>
-        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Margin" Value="10,5"/>
         <Setter Property="Padding" Value="10"/>
-        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="CornerRadius" Value="5"/>
     </Style>
     
 </Styles>
