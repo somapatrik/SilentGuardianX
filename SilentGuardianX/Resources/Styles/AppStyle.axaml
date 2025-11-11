@@ -2,9 +2,35 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
     
+    <Style Selector="Window">
+        <Setter Property="Background">
+            <Setter.Value>
+                <!--<RadialGradientBrush
+                    Center="75%,25%"        
+                    GradientOrigin="100%,0%"
+                    RadiusX="40%"
+                    RadiusY="40%">      
+                    <GradientStop Color="{StaticResource  NexenColor}" Offset="0"/>
+                    <GradientStop Color="{StaticResource GithubDark}" Offset="1"/>
+                </RadialGradientBrush>-->
+                <LinearGradientBrush StartPoint="50%,100%" EndPoint="50%,0%">
+                    <GradientStop Color="#16222A" Offset="0"/>
+                    <GradientStop Color="#3A6073" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style Selector="Button">
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+    
+    <Style Selector="Border.TransparentBar">
+        <Setter Property="Background" Value="{StaticResource TransparentWhiteBrush}"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="CornerRadius" Value="10"/>
     </Style>
     
 </Styles>

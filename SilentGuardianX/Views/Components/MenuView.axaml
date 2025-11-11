@@ -2,22 +2,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:SilentGuardianX.ViewModels"
+             xmlns:viewModels="clr-namespace:SilentGuardianX.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="SilentGuardianX.Views.Components.MenuView">
+             x:Class="SilentGuardianX.Views.Components.MenuView"
+             x:DataType="viewModels:MenuViewModel">
     
     
-    <Grid RowDefinitions="Auto,*,Auto" HorizontalAlignment="Center">
+    <UserControl.DataContext>
+        <vm:MenuViewModel/>
+    </UserControl.DataContext>
+    
+    <Border Classes="TransparentBar"
+            MinWidth="200">
+    
+        <Grid RowDefinitions="Auto,*,Auto" 
+          HorizontalAlignment="Stretch">
         
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto">
-            <Button Grid.Row="0" Content="Nová skupina" />
-            <TextBox Grid.Row="1" Watermark="Název nové skupiny" HorizontalAlignment="Stretch"/>
-            <TextBox Grid.Row="2" Watermark="Popis" AcceptsReturn="True" Height="150"/>
-            <Grid Grid.Row="3" ColumnDefinitions="*,*">
-                <Button Grid.Column="0" Content="Zrušit"/>
-                <Button Grid.Column="1" Content="Vytvořit"/>
+        <Grid 
+            RowDefinitions="Auto,Auto,Auto,Auto"
+            RowSpacing="10">
+            
+            <Button Grid.Row="0" 
+                    Content="Přidat skupinu" 
+                    Command="{Binding ToggleGroupCreationCommand}"
+                    IsVisible="{Binding !DisplayGroupCreation}"/>
+            <TextBox Grid.Row="1" 
+                     Watermark="Název nové skupiny" 
+                     HorizontalAlignment="Stretch"
+                     IsVisible="{Binding DisplayGroupCreation}"/>
+            <TextBox Grid.Row="2" 
+                     Watermark="Popis" 
+                     AcceptsReturn="True" 
+                     Height="150" 
+                     IsVisible="{Binding DisplayGroupCreation}"/>
+            <Grid Grid.Row="3" 
+                  ColumnDefinitions="*,*" 
+                  IsVisible="{Binding DisplayGroupCreation}">
+                <Button Grid.Column="0" 
+                        Content="Zrušit" 
+                        Command="{Binding ToggleGroupCreationCommand}"/>
+                <Button Grid.Column="1" 
+                        Content="Vytvořit"/>
             </Grid>
         </Grid>        
         
     </Grid>
+        
+    </Border>
     
 </UserControl>
