@@ -16,10 +16,6 @@ public class GetEndpointGroupsQueryHandler : IQueryHandler<GetEndpointGroupsQuer
     public async ValueTask<IEnumerable<EndpointGroupDTO>> Handle(GetEndpointGroupsQuery query, CancellationToken cancellationToken)
     {
         var groups = await _endpointGroupRepository.GetAsync();
-        var dtos = groups.Select(g => new EndpointGroupDTO()
-        {
-          Id = g.Id,
-          
-        })};
+        
     }
 }
