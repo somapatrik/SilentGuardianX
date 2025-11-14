@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using SilentGuardian.Domain.Endpoints;
 using SilentGuardian.Domain.Repositories;
 using SilentGuardian.Infrastructure.Context;
@@ -19,8 +20,8 @@ public class EndpointGroupRepository : IEndpointGroupRepository
         await _context.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<EndpointGroup>> GetAsync()
+    public async Task<IEnumerable<EndpointGroup>> GetAsync()
     {
-        throw new NotImplementedException();
+        return await _context.EndpointGroups.ToListAsync();
     }
 }
