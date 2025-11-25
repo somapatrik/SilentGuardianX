@@ -2,16 +2,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:SilentGuardianX.ViewModels"
-             xmlns:viewModels="clr-namespace:SilentGuardianX.ViewModels"
+             xmlns:vmCopmponents="clr-namespace:SilentGuardianX.ViewModels.Components"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SilentGuardianX.Views.Components.MenuView"
-             x:DataType="viewModels:MenuViewModel">
-    
-    
-    <UserControl.DataContext>
-        <vm:MenuViewModel/>
-    </UserControl.DataContext>
+             x:DataType="vmCopmponents:MenuViewModel">
     
     <Border Classes="TransparentBar"
             MinWidth="200">
@@ -19,7 +13,7 @@
         <Grid RowDefinitions="Auto,*,Auto" 
           HorizontalAlignment="Stretch">
         
-        <Grid 
+            <Grid 
             RowDefinitions="Auto,Auto,Auto,Auto"
             RowSpacing="10">
             
@@ -30,6 +24,7 @@
             <TextBox Grid.Row="1" 
                      Watermark="Název nové skupiny" 
                      HorizontalAlignment="Stretch"
+                     Text="{Binding GroupName}"
                      IsVisible="{Binding DisplayGroupCreation}"/>
             <TextBox Grid.Row="2" 
                      Watermark="Popis" 
@@ -43,12 +38,23 @@
                         Content="Zrušit" 
                         Command="{Binding ToggleGroupCreationCommand}"/>
                 <Button Grid.Column="1" 
-                        Content="Vytvořit"/>
+                        Content="Vytvořit"
+                        Command="{Binding CreateGroupCommand}"/>
             </Grid>
         </Grid>        
-        
-    </Grid>
-        
+            
+            <Grid Grid.Row="1">
+                <ScrollViewer>
+                    <ItemsControl ItemsSource="{Binding EndpointGroups}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding GroupName}"></Label>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
     </Border>
     
 </UserControl>

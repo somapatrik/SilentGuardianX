@@ -14,7 +14,7 @@
         ColumnDefinitions="Auto,*,auto"
         RowDefinitions="Auto,*,auto">
         
-        <componets:MenuView Grid.Row="1" Grid.Column="0"/>
+        <ContentControl Content="{Binding MenuViewModel}" Grid.Row="1" Grid.Column="0"/>
         <componets:BottomBar Grid.Row="2" Grid.ColumnSpan="3"/>
         
     </Grid>

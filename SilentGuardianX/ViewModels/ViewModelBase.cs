@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Mediator;
 
 namespace SilentGuardianX.ViewModels;
 

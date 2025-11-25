@@ -3,12 +3,12 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
-using Mediator;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using SilentGuardian.Application.Extensions;
 using SilentGuardian.Infrastructure.Extensions;
 using SilentGuardianX.Extensions;
+using SilentGuardianX.ViewModels.Components;
 using SilentGuardianX.ViewModels;
 using SilentGuardianX.Views;
 
@@ -40,7 +40,7 @@ public partial class App : Application
 
         // Creates a ServiceProvider containing services from the provided IServiceCollection
         var services = collection.BuildServiceProvider();
-        var mediator = services.GetRequiredService<IMediator>();
+        //var mediator = services.GetRequiredService<IMediator>();
     
         var vm = services.GetRequiredService<MainViewModel>();
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)

@@ -4,22 +4,19 @@ using Mediator;
 using SilentGuardian.Application.Commands.EndpointGroup.Create;
 using SilentGuardian.Application.Queries.GetEndpoints;
 using SilentGuardian.Domain.Repositories;
+using SilentGuardianX.ViewModels.Components;
 
 namespace SilentGuardianX.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
-    IMediator _mediator;
-    public MainViewModel(IMediator mediator)
-    {
-        _mediator = mediator;
-
-        CreateGroup();
-    }
+    public MenuViewModel MenuViewModel { get; }
     
-    private async void CreateGroup()
+    IMediator _mediator;
+    
+    public MainViewModel(IMediator mediator, MenuViewModel menuViewModel)
     {
-        await _mediator.Send(new CreateEndpointGroupCommand("Test", "dhsfjkhdsf"));
-        var nvm = _mediator.Send(new GetEndpointGroupsQuery());
+        MenuViewModel = menuViewModel;
+        _mediator = mediator;
     }
 }
