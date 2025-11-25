@@ -1,5 +1,4 @@
 using Microsoft.Extensions.DependencyInjection;
-using SilentGuardianX.Services;
 using SilentGuardianX.ViewModels.Components;
 using SilentGuardianX.ViewModels;
 
@@ -11,6 +10,5 @@ public static class ServiceCollectionExtension
     {
         collection.AddTransient<MainViewModel>();
         collection.AddTransient<MenuViewModel>();
-        collection.AddSingleton<MediatorService>();
     }
 }

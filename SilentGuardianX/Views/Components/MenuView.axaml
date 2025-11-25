@@ -13,7 +13,7 @@
         <Grid RowDefinitions="Auto,*,Auto" 
           HorizontalAlignment="Stretch">
         
-            <Grid 
+            <Grid Grid.Row="0" 
             RowDefinitions="Auto,Auto,Auto,Auto"
             RowSpacing="10">
             
