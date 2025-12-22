@@ -16,6 +16,8 @@ namespace SilentGuardianXBlazorHybrid
 
 			builder.Services.AddMauiBlazorWebView();
 
+
+
 #if DEBUG
 			builder.Services.AddBlazorWebViewDeveloperTools();
 			builder.Logging.AddDebug();
