@@ -27,6 +27,7 @@ public class AppMapper : IAppMapper
             Id = endpoint.Id,
             Name = endpoint.Name,
             Description = endpoint.Description,
+            IpAddress =  endpoint.IpAddress,
             IsEnabled = endpoint.IsEnabled,
             Result = ToDTO(endpoint.Result),
             CheckMethods = endpoint.CheckMethods.Select(ToDTO).ToList(),

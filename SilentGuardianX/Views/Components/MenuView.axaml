@@ -13,6 +13,7 @@
         <Grid RowDefinitions="Auto,*,Auto" 
           HorizontalAlignment="Stretch">
         
+            <!-- New group form -->
             <Grid Grid.Row="0" 
             RowDefinitions="Auto,Auto,Auto,Auto"
             RowSpacing="10">
@@ -43,12 +44,21 @@
             </Grid>
         </Grid>        
             
+            <!-- List of groups -->
             <Grid Grid.Row="1">
                 <ScrollViewer>
                     <ItemsControl ItemsSource="{Binding EndpointGroups}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Label Content="{Binding GroupName}"></Label>
+                                <Border CornerRadius="5" 
+                                        Background="{StaticResource GithubDark}"
+                                        Margin="0,5"
+                                        Padding="5">
+                                    
+                                    <Grid RowDefinitions="Auto,*,auto" ColumnDefinitions="Auto,*,Auto">
+                                        <Label Grid.Row="1" Grid.Column="1" Content="{Binding GroupName}"/>
+                                    </Grid>
+                                </Border>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>

@@ -1,3 +1,4 @@
+using System.Net;
 using SilentGuardian.Domain.Checks;
 
 namespace SilentGuardian.Domain.Endpoints;
@@ -6,6 +7,7 @@ public class Endpoint
 {
     public Guid Id { get; private set; }
     public string Name { get; private set; }
+    public string IpAddress { get; private set; }
     public string? Description { get; private set; }
     public bool IsEnabled { get; private set; }
     public EndpointResult Result { get; private set; }
@@ -16,7 +18,7 @@ public class Endpoint
     public Guid? EndpointGroupId  { get; private set; }
     public EndpointGroup? EndpointGroup { get; private set; }
     
-    public static Endpoint Create(string name, string? description = null, bool isEnabled = true, int timeout = 1000)
+    public static Endpoint Create(string name,string ip, string? description = null, bool isEnabled = true, int timeout = 1000)
     {
         var endpoint = new Endpoint();
         endpoint.Id = Guid.NewGuid();
@@ -24,6 +26,7 @@ public class Endpoint
         endpoint.SetTimeout(timeout);
         endpoint.IsEnabled = isEnabled;
         endpoint.Description = description;
+        endpoint.SetIp(ip);
         return endpoint;
     }
 
@@ -46,6 +49,14 @@ public class Endpoint
     public void RemoveCheckMethod(CheckMethod checkMethod)
     {
         CheckMethods.Remove(checkMethod);
+    }
+    
+    private void SetIp(string ip)
+    {
+        if (IPAddress.TryParse(ip, out _))
+            IpAddress = ip;
+        else
+            throw new ArgumentException("IP must be a valid IPv4 address.", nameof(ip));
     }
 
     private void SetName(string name)

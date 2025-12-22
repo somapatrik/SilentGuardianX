@@ -19,6 +19,9 @@ public class EndpointEntityTypeConfiguration : IEntityTypeConfiguration<Endpoint
         builder.Property(e => e.Description)
             .HasMaxLength(200);
 
+        builder.Property(e => e.IpAddress)
+            .IsRequired();
+
         builder.Property(e => e.IsEnabled)
             .IsRequired();
 

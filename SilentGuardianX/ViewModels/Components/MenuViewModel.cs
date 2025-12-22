@@ -36,6 +36,8 @@ public partial class MenuViewModel : ViewModelBase
     private async Task CreateGroup()
     {
         await _mediator.Send(new CreateEndpointGroupCommand(GroupName, Description));
+        await LoadGroups();
+        DisplayGroupCreation = false;
     }
 
     private async Task LoadGroups()
