@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Code\\SilentGuardianX\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD771DF-0EEA-436A-9172-F61304D0EA99}|SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\SilentGuardianXBlazorHybrid.csproj|c:\\code\\silentguardianx\\silentguardianblazorhybrid\\silentguardianxblazorhybrid\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9BD771DF-0EEA-436A-9172-F61304D0EA99}|SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\SilentGuardianXBlazorHybrid.csproj|solutionrelative:silentguardianblazorhybrid\\silentguardianxblazorhybrid\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C949E8CC-B454-4981-8748-D900C01BCB4D}|SilentGuardianX\\SilentGuardianX.csproj|c:\\code\\silentguardianx\\silentguardianx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C949E8CC-B454-4981-8748-D900C01BCB4D}|SilentGuardianX\\SilentGuardianX.csproj|solutionrelative:silentguardianx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C949E8CC-B454-4981-8748-D900C01BCB4D}|SilentGuardianX\\SilentGuardianX.csproj|c:\\code\\silentguardianx\\silentguardianx\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C949E8CC-B454-4981-8748-D900C01BCB4D}|SilentGuardianX\\SilentGuardianX.csproj|solutionrelative:silentguardianx\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C949E8CC-B454-4981-8748-D900C01BCB4D}|SilentGuardianX\\SilentGuardianX.csproj|c:\\code\\silentguardianx\\silentguardianx\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C949E8CC-B454-4981-8748-D900C01BCB4D}|SilentGuardianX\\SilentGuardianX.csproj|solutionrelative:silentguardianx\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD771DF-0EEA-436A-9172-F61304D0EA99}|SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\SilentGuardianXBlazorHybrid.csproj|c:\\code\\silentguardianx\\silentguardianblazorhybrid\\silentguardianxblazorhybrid\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9BD771DF-0EEA-436A-9172-F61304D0EA99}|SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\SilentGuardianXBlazorHybrid.csproj|solutionrelative:silentguardianblazorhybrid\\silentguardianxblazorhybrid\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD771DF-0EEA-436A-9172-F61304D0EA99}|SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\SilentGuardianXBlazorHybrid.csproj|c:\\code\\silentguardianx\\silentguardianblazorhybrid\\silentguardianxblazorhybrid\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9BD771DF-0EEA-436A-9172-F61304D0EA99}|SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\SilentGuardianXBlazorHybrid.csproj|solutionrelative:silentguardianblazorhybrid\\silentguardianxblazorhybrid\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Code\\SilentGuardianX\\SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\appsettings.json",
+              "RelativeDocumentMoniker": "SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\appsettings.json",
+              "ToolTip": "C:\\Code\\SilentGuardianX\\SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\appsettings.json",
+              "RelativeToolTip": "SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-22T12:58:20.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Code\\SilentGuardianX\\SilentGuardianX\\appsettings.json",
+              "RelativeDocumentMoniker": "SilentGuardianX\\appsettings.json",
+              "ToolTip": "C:\\Code\\SilentGuardianX\\SilentGuardianX\\appsettings.json",
+              "RelativeToolTip": "SilentGuardianX\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-22T12:58:11.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceCollectionExtension.cs",
+              "DocumentMoniker": "C:\\Code\\SilentGuardianX\\SilentGuardianX\\Extensions\\ServiceCollectionExtension.cs",
+              "RelativeDocumentMoniker": "SilentGuardianX\\Extensions\\ServiceCollectionExtension.cs",
+              "ToolTip": "C:\\Code\\SilentGuardianX\\SilentGuardianX\\Extensions\\ServiceCollectionExtension.cs",
+              "RelativeToolTip": "SilentGuardianX\\Extensions\\ServiceCollectionExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T12:55:04.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.axaml.cs",
+              "DocumentMoniker": "C:\\Code\\SilentGuardianX\\SilentGuardianX\\App.axaml.cs",
+              "RelativeDocumentMoniker": "SilentGuardianX\\App.axaml.cs",
+              "ToolTip": "C:\\Code\\SilentGuardianX\\SilentGuardianX\\App.axaml.cs",
+              "RelativeToolTip": "SilentGuardianX\\App.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T12:54:59.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Code\\SilentGuardianX\\SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Code\\SilentGuardianX\\SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T12:51:50.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Code\\SilentGuardianX\\SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Code\\SilentGuardianX\\SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "SilentGuardianBlazorHybrid\\SilentGuardianXBlazorHybrid\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T12:51:48.742Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
